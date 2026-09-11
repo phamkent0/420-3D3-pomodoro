@@ -65,17 +65,17 @@ class Minuteur(Sujet):
     def get_donnees(self) -> dict:
         # À compléter : retourner un dictionnaire avec :
         # temps_restant, etat, en_pause, sessions_completees, duree_totale
-       if self._etat == "Travail":
+        if self._etat == "Travail":
            duree_totale = DUREE_TRAVAIL * self._sessions_completees
-       else:
+        else:
            duree_totale = DUREE_PAUSE * self._sessions_completees
 
-       return {
+        return {
            "temps_restant": self._temps_restant,
            "etat": self._etat,
            "en_pause": self._en_pause,
            "sessions_completees": self._sessions_completees,
            "duree_totale": duree_totale,
-       }
+        }
 
         return donnees
